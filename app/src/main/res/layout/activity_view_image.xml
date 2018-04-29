@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.webatron.rakesh.galleryq.ViewImage">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/imageviewtoolbar"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageviewback"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_action_backwhite"/>
+            <TextView
+                android:id="@+id/tiitleimage"
+                android:layout_toRightOf="@id/imageviewback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Image Name"
+                android:padding="5dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@id/imageviewtoolbar"
+        android:id="@+id/relativecontainer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/viewimagpreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="UNDER"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="true"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="8"/>
+    </RelativeLayout>
+</RelativeLayout>
